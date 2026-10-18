@@ -6,13 +6,23 @@ import {
   IsArray,
   MaxLength,
   Min,
+  Max,
   ValidateNested,
   IsBoolean,
+  IsInt,
 } from 'class-validator';
 import { Type } from 'class-transformer';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { BookCondition, ShippingOption, ListingStatus } from '@prisma/client';
-import { PaginationDto } from 'src/common/dto/pagination.dto';
+import {
+  PaginationDto,
+  PAGINATION_MAX_LIMIT,
+  PAGINATION_MAX_PAGE,
+} from 'src/common/dto/pagination.dto';
+
+// Max price is bounded to prevent absurd values from causing
+// unnecessary scan cost on the price index.
+export const PRICE_MAX = 1_000_000_000; // 1B VND
 
 export class CreateListingDto {
   @ApiProperty({ example: 1, description: 'ID của sách' })
@@ -120,6 +130,26 @@ export class RejectListingDto {
 }
 
 export class SearchListingDto extends PaginationDto {
+  // Re-declare with @Type + @IsInt so that the DTO layer is robust
+  // even when the inherited decorators are lost (e.g. when a global
+  // ValidationPipe whitelist strips unknown properties, or when the
+  // body comes from a non-Express path).
+  @ApiPropertyOptional({ default: 1, minimum: 1, maximum: PAGINATION_MAX_PAGE })
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt({ message: 'page must be an integer' })
+  @Min(1)
+  @Max(PAGINATION_MAX_PAGE)
+  page?: number = 1;
+
+  @ApiPropertyOptional({ default: 20, minimum: 1, maximum: PAGINATION_MAX_LIMIT })
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt({ message: 'limit must be an integer' })
+  @Min(1)
+  @Max(PAGINATION_MAX_LIMIT)
+  limit?: number = 20;
+
   @ApiPropertyOptional({ description: 'Tìm kiếm toàn phần' })
   @IsOptional()
   @IsString()
@@ -157,14 +187,18 @@ export class SearchListingDto extends PaginationDto {
 
   @ApiPropertyOptional({ description: 'Giá từ', type: Number })
   @IsOptional()
-  @IsNumber()
+  @Type(() => Number)
+  @IsNumber({ allowNaN: false, allowInfinity: false }, { message: 'minPrice must be a finite number' })
   @Min(0)
+  @Max(PRICE_MAX)
   minPrice?: number;
 
   @ApiPropertyOptional({ description: 'Giá đến', type: Number })
   @IsOptional()
-  @IsNumber()
+  @Type(() => Number)
+  @IsNumber({ allowNaN: false, allowInfinity: false }, { message: 'maxPrice must be a finite number' })
   @Min(0)
+  @Max(PRICE_MAX)
   maxPrice?: number;
 
   @ApiPropertyOptional({ description: 'Chỉ hiển thị listing đã approve' })

@@ -44,6 +44,11 @@ export enum AuditAction {
   // Admin actions
   USER_DEACTIVATED = 'USER_DEACTIVATED',
   REPORT_RESOLVED = 'REPORT_RESOLVED',
+  // Security / abuse signal — used when service-layer sanitization
+  // clamps / drops inputs that the DTO should have caught. If you
+  // see this action, the request bypassed the ValidationPipe and
+  // you should investigate the caller.
+  SUSPICIOUS_INPUT = 'SUSPICIOUS_INPUT',
 }
 
 @Injectable()

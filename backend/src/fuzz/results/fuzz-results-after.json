@@ -1,0 +1,424 @@
+{
+  "target": {
+    "file": "backend/src/modules/listing/services/listing.service.ts",
+    "class": "ListingService",
+    "method": "findAll"
+  },
+  "phase": "after",
+  "finished_at": "2026-10-13T14:15:54Z",
+  "total": 50,
+  "passed": 50,
+  "failed": 0,
+  "skipped": 0,
+  "exceptions": 0,
+  "jest_counters": {
+    "numTotalTests": 50,
+    "numPassedTests": 50,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTotalTestSuites": 1,
+    "success": true
+  },
+  "test_results": [
+    {
+      "id": "?",
+      "title": "accepts q as normal string (calls Prisma)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter accepts q as normal string (calls Prisma)",
+      "status": "passed",
+      "duration_ms": 5,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "accepts q as empty string",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter accepts q as empty string",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "accepts q as whitespace string",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter accepts q as whitespace string",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "accepts q as Vietnamese string",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter accepts q as Vietnamese string",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "accepts q as Unicode/CJK string",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter accepts q as Unicode/CJK string",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q=true: no OR clause, no Prisma error (FIXED)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter q=true: no OR clause, no Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q=false: no OR clause, no Prisma error (FIXED)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter q=false: no OR clause, no Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q=NaN: no OR clause, no Prisma error (FIXED)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter q=NaN: no OR clause, no Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q=Infinity: no OR clause, no Prisma error (FIXED)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter q=Infinity: no OR clause, no Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q=-Infinity: no OR clause, no Prisma error (FIXED)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter q=-Infinity: no OR clause, no Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q=object: no OR clause, no Prisma error (FIXED)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter q=object: no OR clause, no Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q=array: no OR clause, no Prisma error (FIXED)",
+      "fullName": "Bug 1 — FIXED: typeof guard for q parameter q=array: no OR clause, no Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "accepts page=1 (valid default)",
+      "fullName": "Bug 2 — FIXED: Math.max(0, ...) prevents negative skip accepts page=1 (valid default)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "accepts page=2",
+      "fullName": "Bug 2 — FIXED: Math.max(0, ...) prevents negative skip accepts page=2",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=0: returns empty without Prisma error (FIXED)",
+      "fullName": "Bug 2 — FIXED: Math.max(0, ...) prevents negative skip page=0: returns empty without Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=-1: returns empty without Prisma error (FIXED)",
+      "fullName": "Bug 2 — FIXED: Math.max(0, ...) prevents negative skip page=-1: returns empty without Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=-999: returns empty without Prisma error (FIXED)",
+      "fullName": "Bug 2 — FIXED: Math.max(0, ...) prevents negative skip page=-999: returns empty without Prisma error (FIXED)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "large valid page number",
+      "fullName": "Bug 2 — FIXED: Math.max(0, ...) prevents negative skip large valid page number",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles SQL injection payload without error",
+      "fullName": "Security: SQL injection, XSS, path traversal handles SQL injection payload without error",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles SQL injection: DROP TABLE",
+      "fullName": "Security: SQL injection, XSS, path traversal handles SQL injection: DROP TABLE",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles SQL injection: UNION SELECT",
+      "fullName": "Security: SQL injection, XSS, path traversal handles SQL injection: UNION SELECT",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles XSS payload: script tag",
+      "fullName": "Security: SQL injection, XSS, path traversal handles XSS payload: script tag",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles XSS payload: img onerror",
+      "fullName": "Security: SQL injection, XSS, path traversal handles XSS payload: img onerror",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles XSS payload: SVG onload",
+      "fullName": "Security: SQL injection, XSS, path traversal handles XSS payload: SVG onload",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles path traversal: forward slashes",
+      "fullName": "Security: SQL injection, XSS, path traversal handles path traversal: forward slashes",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles path traversal: backslashes (Windows)",
+      "fullName": "Security: SQL injection, XSS, path traversal handles path traversal: backslashes (Windows)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles Unicode normalization: combined diacritics",
+      "fullName": "Security: SQL injection, XSS, path traversal handles Unicode normalization: combined diacritics",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles Unicode: precomposed form",
+      "fullName": "Security: SQL injection, XSS, path traversal handles Unicode: precomposed form",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles empty q (no search)",
+      "fullName": "Security: SQL injection, XSS, path traversal handles empty q (no search)",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles very long string (10K chars)",
+      "fullName": "Security: SQL injection, XSS, path traversal handles very long string (10K chars)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "limit=0 is clamped to 1 (no Infinity in meta)",
+      "fullName": "Boundary Values (post-sanitize) limit=0 is clamped to 1 (no Infinity in meta)",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "limit=1 (minimum, kept)",
+      "fullName": "Boundary Values (post-sanitize) limit=1 (minimum, kept)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "limit=1000 is clamped to 100 (DoS guard)",
+      "fullName": "Boundary Values (post-sanitize) limit=1000 is clamped to 100 (DoS guard)",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "limit=-1 is clamped to 1 (no Prisma error)",
+      "fullName": "Boundary Values (post-sanitize) limit=-1 is clamped to 1 (no Prisma error)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles minPrice=0",
+      "fullName": "Boundary Values (post-sanitize) handles minPrice=0",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles minPrice > maxPrice",
+      "fullName": "Boundary Values (post-sanitize) handles minPrice > maxPrice",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles very large price values (clamped to 1B)",
+      "fullName": "Boundary Values (post-sanitize) handles very large price values (clamped to 1B)",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "handles undefined query params (all defaults)",
+      "fullName": "Boundary Values (post-sanitize) handles undefined query params (all defaults)",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=\"abc\" → clamped to 1, no Prisma error, audit logged",
+      "fullName": "Sanitization: invalid types and extreme values page=\"abc\" → clamped to 1, no Prisma error, audit logged",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=NaN → clamped to 1",
+      "fullName": "Sanitization: invalid types and extreme values page=NaN → clamped to 1",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=Infinity → clamped to 1",
+      "fullName": "Sanitization: invalid types and extreme values page=Infinity → clamped to 1",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=3.7 → truncated to 3",
+      "fullName": "Sanitization: invalid types and extreme values page=3.7 → truncated to 3",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=Number.MAX_SAFE_INTEGER+1 → clamped to MAX_PAGE=10000",
+      "fullName": "Sanitization: invalid types and extreme values page=Number.MAX_SAFE_INTEGER+1 → clamped to MAX_PAGE=10000",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "limit=NaN → clamped to default 20",
+      "fullName": "Sanitization: invalid types and extreme values limit=NaN → clamped to default 20",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "limit=Infinity → treated as invalid, reset to default 20",
+      "fullName": "Sanitization: invalid types and extreme values limit=Infinity → treated as invalid, reset to default 20",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "minPrice=NaN → dropped from query, no Prisma error",
+      "fullName": "Sanitization: invalid types and extreme values minPrice=NaN → dropped from query, no Prisma error",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "minPrice=999999999999999 → clamped to 1B",
+      "fullName": "Sanitization: invalid types and extreme values minPrice=999999999999999 → clamped to 1B",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "q as 10000-char string → truncated to 500",
+      "fullName": "Sanitization: invalid types and extreme values q as 10000-char string → truncated to 500",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=0 (clamped to 1) is consistent with DTO contract",
+      "fullName": "Sanitization: invalid types and extreme values page=0 (clamped to 1) is consistent with DTO contract",
+      "status": "passed",
+      "duration_ms": 1,
+      "failureMessages": []
+    },
+    {
+      "id": "?",
+      "title": "page=-1 (clamped to 1) is consistent with DTO contract",
+      "fullName": "Sanitization: invalid types and extreme values page=-1 (clamped to 1) is consistent with DTO contract",
+      "status": "passed",
+      "duration_ms": 0,
+      "failureMessages": []
+    }
+  ]
+}

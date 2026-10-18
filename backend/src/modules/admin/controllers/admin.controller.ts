@@ -16,6 +16,7 @@ import { RolesGuard } from 'src/auth/guards/roles.guard';
 import { Roles } from 'src/auth/decorators/roles.decorator';
 import { RoleType } from '@prisma/client';
 import { CurrentUser } from 'src/auth/decorators/current-user.decorator';
+import { AdminEditListingDto } from '../dto/admin-edit-listing.dto';
 
 @ApiTags('Admin - Dashboard')
 @Controller('admin')
@@ -114,21 +115,7 @@ export class AdminController {
   @ApiOperation({ summary: 'Admin chỉnh sửa listing (bao gồm thông tin sách)' })
   async editListing(
     @Param('id', ParseIntPipe) id: number,
-    @Body() body: {
-      title?: string;
-      author?: string;
-      publisher?: string;
-      isbn?: string;
-      edition?: string;
-      publicationYear?: number;
-      categoryId?: number;
-      price?: string;
-      quantity?: number;
-      condition?: string;
-      description?: string;
-      location?: string;
-      shippingOption?: string;
-    },
+    @Body() body: AdminEditListingDto,
     @CurrentUser() user: any,
   ) {
     return this.adminService.editListing(id, body, user.id);

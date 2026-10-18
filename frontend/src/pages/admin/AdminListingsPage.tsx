@@ -45,7 +45,7 @@ export default function AdminListingsPage() {
 
   const updateMutation = useMutation({
     mutationFn: ({ id, data }: { id: number; data: any }) =>
-      adminApi.updateListing(id, data),
+      adminApi.editListing(id, data),
     onSuccess: () => {
       toast.success('Đã cập nhật listing');
       setEditingListing(null);

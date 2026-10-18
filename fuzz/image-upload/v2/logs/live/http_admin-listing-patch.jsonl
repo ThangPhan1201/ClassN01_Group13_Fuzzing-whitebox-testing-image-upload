@@ -1,0 +1,106 @@
+{"trial": 0, "ts": 1792254021.152771, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 17.553, "status_code": 200, "len_body": 1060}
+{"trial": 1, "ts": 1792254021.16639, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 13.547, "status_code": 200, "len_body": 1050}
+{"trial": 2, "ts": 1792254021.176636, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 10.199, "status_code": 500, "len_body": 52}
+{"trial": 2, "ts": 1792254021.176636, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 10.199, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial2_HTTP_500_f225c10b.json"}
+{"trial": 3, "ts": 1792254021.1911821, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 14.286, "status_code": 200, "len_body": 1053}
+{"trial": 4, "ts": 1792254021.206445, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 15.208, "status_code": 200, "len_body": 1494}
+{"trial": 5, "ts": 1792254021.217516, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 11.015, "status_code": 200, "len_body": 1080}
+{"trial": 6, "ts": 1792254021.22808, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.505, "status_code": 200, "len_body": 1080}
+{"trial": 7, "ts": 1792254021.2388449, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 10.709, "status_code": 500, "len_body": 52}
+{"trial": 7, "ts": 1792254021.2388449, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 10.709, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial7_HTTP_500_ee61df0b.json"}
+{"trial": 8, "ts": 1792254021.2494211, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.218, "status_code": 200, "len_body": 1076}
+{"trial": 9, "ts": 1792254021.2586722, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.204, "status_code": 500, "len_body": 52}
+{"trial": 9, "ts": 1792254021.2586722, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.204, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial9_HTTP_500_5bba1800.json"}
+{"trial": 10, "ts": 1792254021.268536, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.531, "status_code": 500, "len_body": 52}
+{"trial": 10, "ts": 1792254021.268536, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.531, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial10_HTTP_500_56ebd84a.json"}
+{"trial": 11, "ts": 1792254021.279317, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.131, "status_code": 200, "len_body": 1081}
+{"trial": 12, "ts": 1792254021.2889228, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.547, "status_code": 200, "len_body": 1081}
+{"trial": 13, "ts": 1792254021.298806, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.833, "status_code": 200, "len_body": 1044}
+{"trial": 14, "ts": 1792254021.3095272, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.679, "status_code": 200, "len_body": 1225}
+{"trial": 15, "ts": 1792254021.319378, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.81, "status_code": 200, "len_body": 1225}
+{"trial": 16, "ts": 1792254021.3297532, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.333, "status_code": 200, "len_body": 1044}
+{"trial": 17, "ts": 1792254021.340705, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.885, "status_code": 200, "len_body": 1269}
+{"trial": 18, "ts": 1792254021.352153, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 11.406, "status_code": 200, "len_body": 1066}
+{"trial": 19, "ts": 1792254021.361872, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.68, "status_code": 200, "len_body": 1066}
+{"trial": 20, "ts": 1792254021.39011, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 28.186, "status_code": 200, "len_body": 101047}
+{"trial": 21, "ts": 1792254021.3999739, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.815, "status_code": 500, "len_body": 52}
+{"trial": 21, "ts": 1792254021.3999739, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.815, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial21_HTTP_500_95f667fc.json"}
+{"trial": 0, "ts": 1792255289.497398, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 17.072, "status_code": 200, "len_body": 1077}
+{"trial": 1, "ts": 1792255289.5576892, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 60.022, "status_code": 500, "len_body": 52}
+{"trial": 1, "ts": 1792255289.5576892, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 60.022, "status_code": 500, "len_body": 52, "saved_to": "logs/live/crashes/admin-listing-patch_trial1_HTTP_500_0446c906.json"}
+{"trial": 2, "ts": 1792255289.575813, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 17.685, "status_code": 200, "len_body": 1077}
+{"trial": 3, "ts": 1792255289.593935, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 18.06, "status_code": 200, "len_body": 1582}
+{"trial": 4, "ts": 1792255289.605045, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 11.054, "status_code": 200, "len_body": 1717}
+{"trial": 5, "ts": 1792255289.614531, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.437, "status_code": 200, "len_body": 1717}
+{"trial": 6, "ts": 1792255289.622249, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.676, "status_code": 500, "len_body": 52}
+{"trial": 6, "ts": 1792255289.622249, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.676, "status_code": 500, "len_body": 52, "saved_to": "logs/live/crashes/admin-listing-patch_trial6_HTTP_500_4e8bb294.json"}
+{"trial": 7, "ts": 1792255289.6325371, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.947, "status_code": 500, "len_body": 52}
+{"trial": 7, "ts": 1792255289.6325371, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.947, "status_code": 500, "len_body": 52, "saved_to": "logs/live/crashes/admin-listing-patch_trial7_HTTP_500_009f454f.json"}
+{"trial": 8, "ts": 1792255289.644063, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 11.2, "status_code": 200, "len_body": 1380}
+{"trial": 9, "ts": 1792255289.654572, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.456, "status_code": 200, "len_body": 1111}
+{"trial": 10, "ts": 1792255289.663475, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.859, "status_code": 200, "len_body": 1111}
+{"trial": 11, "ts": 1792255289.6728551, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.328, "status_code": 200, "len_body": 1500}
+{"trial": 12, "ts": 1792255289.6811829, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.271, "status_code": 200, "len_body": 1500}
+{"trial": 13, "ts": 1792255289.691206, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.987, "status_code": 200, "len_body": 1297}
+{"trial": 14, "ts": 1792255289.699834, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.59, "status_code": 200, "len_body": 1085}
+{"trial": 15, "ts": 1792255289.7076428, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.771, "status_code": 200, "len_body": 1085}
+{"trial": 16, "ts": 1792255289.717196, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.516, "status_code": 200, "len_body": 1078}
+{"trial": 17, "ts": 1792255289.723819, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 6.583, "status_code": 500, "len_body": 52}
+{"trial": 17, "ts": 1792255289.723819, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 6.583, "status_code": 500, "len_body": 52, "saved_to": "logs/live/crashes/admin-listing-patch_trial17_HTTP_500_03dcd4fc.json"}
+{"trial": 18, "ts": 1792255289.734763, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.616, "status_code": 200, "len_body": 1078}
+{"trial": 19, "ts": 1792255289.742831, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 8.03, "status_code": 500, "len_body": 52}
+{"trial": 19, "ts": 1792255289.742831, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 8.03, "status_code": 500, "len_body": 52, "saved_to": "logs/live/crashes/admin-listing-patch_trial19_HTTP_500_0079eca8.json"}
+{"trial": 0, "ts": 1792255400.518378, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 14.014, "status_code": 200, "len_body": 1078}
+{"trial": 1, "ts": 1792255400.5279381, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.191, "status_code": 500, "len_body": 52}
+{"trial": 1, "ts": 1792255400.5279381, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 9.191, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial1_HTTP_500_1c5d5ae0.json"}
+{"trial": 2, "ts": 1792255400.541893, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 13.327, "status_code": 200, "len_body": 1579}
+{"trial": 3, "ts": 1792255400.548987, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.041, "status_code": 500, "len_body": 52}
+{"trial": 3, "ts": 1792255400.548987, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.041, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial3_HTTP_500_e43455e5.json"}
+{"trial": 4, "ts": 1792255400.558712, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.34, "status_code": 200, "len_body": 1112}
+{"trial": 5, "ts": 1792255400.566646, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.896, "status_code": 200, "len_body": 1112}
+{"trial": 6, "ts": 1792255400.574889, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.2, "status_code": 200, "len_body": 1112}
+{"trial": 7, "ts": 1792255400.582452, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.527, "status_code": 200, "len_body": 1107}
+{"trial": 8, "ts": 1792255400.589399, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 6.911, "status_code": 200, "len_body": 1107}
+{"trial": 9, "ts": 1792255400.598173, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.736, "status_code": 200, "len_body": 1107}
+{"trial": 10, "ts": 1792255400.605588, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.363, "status_code": 200, "len_body": 1107}
+{"trial": 11, "ts": 1792255400.6110542, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 5.43, "status_code": 500, "len_body": 52}
+{"trial": 11, "ts": 1792255400.6110542, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 5.43, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial11_HTTP_500_7cc7b146.json"}
+{"trial": 12, "ts": 1792255400.619288, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.902, "status_code": 200, "len_body": 1107}
+{"trial": 13, "ts": 1792255400.6277509, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.421, "status_code": 200, "len_body": 1112}
+{"trial": 14, "ts": 1792255400.635882, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.088, "status_code": 200, "len_body": 1293}
+{"trial": 15, "ts": 1792255400.646663, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.745, "status_code": 200, "len_body": 1461}
+{"trial": 16, "ts": 1792255400.657752, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 11.036, "status_code": 200, "len_body": 1456}
+{"trial": 17, "ts": 1792255400.666592, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.792, "status_code": 200, "len_body": 1456}
+{"trial": 18, "ts": 1792255400.676501, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.857, "status_code": 200, "len_body": 1456}
+{"trial": 19, "ts": 1792255400.684176, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.623, "status_code": 500, "len_body": 52}
+{"trial": 19, "ts": 1792255400.684176, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.623, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial19_HTTP_500_9b14fc32.json"}
+{"trial": 20, "ts": 1792255400.6923149, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.835, "status_code": 200, "len_body": 1488}
+{"trial": 21, "ts": 1792255400.701067, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.715, "status_code": 200, "len_body": 1067}
+{"trial": 22, "ts": 1792255400.708139, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.038, "status_code": 200, "len_body": 1067}
+{"trial": 23, "ts": 1792255400.716164, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.982, "status_code": 200, "len_body": 1248}
+{"trial": 24, "ts": 1792255400.723406, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.206, "status_code": 200, "len_body": 1248}
+{"trial": 25, "ts": 1792255400.730788, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.333, "status_code": 200, "len_body": 1249}
+{"trial": 26, "ts": 1792255400.73975, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.915, "status_code": 200, "len_body": 1249}
+{"trial": 27, "ts": 1792255400.748849, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.045, "status_code": 200, "len_body": 1068}
+{"trial": 28, "ts": 1792255400.758025, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.125, "status_code": 200, "len_body": 1344}
+{"trial": 29, "ts": 1792255400.765776, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.714, "status_code": 500, "len_body": 52}
+{"trial": 29, "ts": 1792255400.765776, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.714, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial29_HTTP_500_f455d88e.json"}
+{"trial": 0, "ts": 1792255509.90303, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 12.659, "status_code": 500, "len_body": 52}
+{"trial": 0, "ts": 1792255509.90303, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 12.659, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial0_HTTP_500_8da1aa9c.json"}
+{"trial": 1, "ts": 1792255509.916501, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 12.88, "status_code": 200, "len_body": 1341}
+{"trial": 2, "ts": 1792255509.924694, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 8.138, "status_code": 500, "len_body": 52}
+{"trial": 2, "ts": 1792255509.924694, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 8.138, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial2_HTTP_500_2c666089.json"}
+{"trial": 3, "ts": 1792255509.9344609, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 9.418, "status_code": 200, "len_body": 1341}
+{"trial": 4, "ts": 1792255509.9447858, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.276, "status_code": 200, "len_body": 1106}
+{"trial": 5, "ts": 1792255509.964001, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 19.165, "status_code": 200, "len_body": 1245}
+{"trial": 6, "ts": 1792255509.9749918, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 10.939, "status_code": 200, "len_body": 1362}
+{"trial": 7, "ts": 1792255509.981998, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 6.948, "status_code": 500, "len_body": 52}
+{"trial": 7, "ts": 1792255509.981998, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 6.948, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial7_HTTP_500_00726289.json"}
+{"trial": 8, "ts": 1792255509.9890969, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 6.818, "status_code": 500, "len_body": 52}
+{"trial": 8, "ts": 1792255509.9890969, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 6.818, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial8_HTTP_500_22992cc9.json"}
+{"trial": 9, "ts": 1792255509.998313, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.892, "status_code": 200, "len_body": 1362}
+{"trial": 10, "ts": 1792255510.0073018, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.95, "status_code": 200, "len_body": 1187}
+{"trial": 11, "ts": 1792255510.016304, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 8.964, "status_code": 200, "len_body": 1112}
+{"trial": 12, "ts": 1792255510.023628, "target": "admin-listing-patch", "outcome": "PASS", "reason": "HTTP_200", "elapsed_ms": 7.268, "status_code": 200, "len_body": 1112}
+{"trial": 13, "ts": 1792255510.0310102, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.344, "status_code": 500, "len_body": 52}
+{"trial": 13, "ts": 1792255510.0310102, "target": "admin-listing-patch", "outcome": "CRASH", "reason": "HTTP_500", "elapsed_ms": 7.344, "status_code": 500, "len_body": 52, "saved_to": "/Users/admin/Downloads/fuzzing-white-box/fuzz/image-upload/v2/logs/live/crashes/admin-listing-patch_trial13_HTTP_500_78df7325.json"}

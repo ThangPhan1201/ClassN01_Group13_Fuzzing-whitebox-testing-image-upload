@@ -1,0 +1,13 @@
+{"model_id": "R1", "mutant": "M1", "mut_bytes": [254], "mime": "", "ext": "<none>", "size": 0, "z3_solve_ms": 0.8207499999999257, "status": "sat"}
+{"model_id": "R2", "mutant": "M2", "mut_bytes": [106], "mime": "text/html", "ext": ".jpg", "size": 100, "z3_solve_ms": 0.4780829999999625, "status": "sat"}
+{"model_id": "R3", "mutant": "M3", "mut_bytes": [104], "mime": "image/jpeg", "ext": ".html", "size": 100, "z3_solve_ms": 0.4367909999998254, "status": "sat"}
+{"model_id": "R4", "mutant": "M4", "mut_bytes": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "mime": "image/jpeg", "ext": ".jpg", "size": 5767168, "z3_solve_ms": 2.2411660000001277, "status": "sat"}
+{"model_id": "R5a", "mutant": "M5", "mut_bytes": [77, 90], "mime": "image/jpeg", "ext": ".jpg", "size": 2, "z3_solve_ms": 0.6315830000001021, "status": "sat"}
+{"model_id": "R5b", "mutant": "M6", "mut_bytes": [127, 69, 76, 70], "mime": "image/jpeg", "ext": ".jpg", "size": 4, "z3_solve_ms": 0.5952909999997757, "status": "sat"}
+{"model_id": "R5c", "mutant": "M7", "mut_bytes": [80, 75, 3, 4], "mime": "image/jpeg", "ext": ".jpg", "size": 4, "z3_solve_ms": 0.5840419999998403, "status": "sat"}
+{"model_id": "R5d", "mutant": "M8", "mut_bytes": [202, 254, 186, 190], "mime": "image/jpeg", "ext": ".jpg", "size": 4, "z3_solve_ms": 0.5796249999998615, "status": "sat"}
+{"model_id": "R6", "mutant": "M9", "mut_bytes": [0, 1, 2, 3], "mime": "image/jpeg", "ext": ".jpg", "size": 4, "z3_solve_ms": 0.0, "status": "sat", "mode": "fixed"}
+{"model_id": "R7", "mutant": "M10", "mut_bytes": [0, 0, 0, 0, 0, 0, 0, 0], "mime": "image/png", "ext": ".png", "size": 8, "z3_solve_ms": 0.0, "status": "sat", "mode": "fixed"}
+{"model_id": "R8", "mutant": "M11", "mut_bytes": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "mime": "image/webp", "ext": ".webp", "size": 12, "z3_solve_ms": 0.0, "status": "sat", "mode": "fixed"}
+{"model_id": "R9", "mutant": "M12", "mut_bytes": [], "mime": "image/jpeg", "ext": ".jpg", "size": 0, "z3_solve_ms": 0.4009169999998896, "status": "sat"}
+{"model_id": "R10", "mutant": "M13", "mut_bytes": [170, 187, 204], "mime": "image/jpeg", "ext": ".jpg", "size": 3, "z3_solve_ms": 0.5218329999996385, "status": "sat"}

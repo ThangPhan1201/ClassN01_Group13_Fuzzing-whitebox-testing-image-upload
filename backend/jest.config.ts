@@ -6,11 +6,9 @@ export default {
   testRegex: '.*\\.spec\\.ts$',
   transform: {
     '^.+\\.(t|j)s$': ['ts-jest', {
-      tsconfig: 'tsconfig.json',
-      useESM: true,
+      tsconfig: '<rootDir>/tsconfig.json',
     }],
   },
-  extensionsToTreatAsEsm: ['.ts'],
   collectCoverageFrom: ['src/**/*.(t|j)s'],
   coverageDirectory: './coverage',
   testEnvironment: 'node',
@@ -19,7 +17,4 @@ export default {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  transformIgnorePatterns: [
-    'node_modules/(?!(@nestjs|@prisma|bcrypt)/)',
-  ],
 } satisfies Config;

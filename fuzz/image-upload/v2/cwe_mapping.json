@@ -1,0 +1,24 @@
+{
+  "_doc": "CWE/CVE mapping for the 14 mutants of image-upload parser.py (V2 — dynamic). Each mutant disables exactly one check in validate_file().",
+  "_scope": "Backend ImageUploadService.validateFile() — unpatched (mode='original') vs patched (mode='fixed').",
+  "_note": "Severity & CVE mappings are *predicted* based on CWE class and the type of check that is removed; they are not from a live CVE feed.",
+  "_v2_note": "Same CWE/CVE table as the static pipeline. V2 runs the same mutant set against the same 10 REQs.",
+
+  "M1":  {"cwe": "CWE-20",  "name": "Improper Input Validation",                 "cve_example": "CVE-2017-3735",  "req": "R1_file_not_none",       "group": "N1_Input",   "what_breaks": "null/undefined file passes through to MIME check"},
+  "M2":  {"cwe": "CWE-20",  "name": "Improper Input Validation",                 "cve_example": "CVE-2018-12714", "req": "R2_mime_in_allowlist",    "group": "N1_Input",   "what_breaks": "any mimetype accepted (e.g. text/html)"},
+  "M3":  {"cwe": "CWE-20",  "name": "Improper Input Validation",                 "cve_example": "CVE-2019-0708",  "req": "R3_ext_in_allowlist",     "group": "N1_Input",   "what_breaks": "any extension accepted (e.g. .html)"},
+  "M4":  {"cwe": "CWE-770", "name": "Allocation of Resources Without Limits",    "cve_example": "CVE-2018-6789",  "req": "R4_size_le_5mb",         "group": "N1_Input",   "what_breaks": "no size cap — DoS via large file"},
+
+  "M5":  {"cwe": "CWE-693", "name": "Protection Mechanism Failure",              "cve_example": "CVE-2017-3736",  "req": "R5_detect_MZ_exec",      "group": "N2_Magic",   "what_breaks": "MZ (Windows PE) accepted as image"},
+  "M6":  {"cwe": "CWE-693", "name": "Protection Mechanism Failure",              "cve_example": "CVE-2018-12714", "req": "R5_detect_ELF_exec",     "group": "N2_Magic",   "what_breaks": "ELF (Linux) accepted as image"},
+  "M7":  {"cwe": "CWE-693", "name": "Protection Mechanism Failure",              "cve_example": "CVE-2019-0708",  "req": "R5_detect_ZIP_exec",     "group": "N2_Magic",   "what_breaks": "ZIP/JAR accepted as image"},
+  "M8":  {"cwe": "CWE-693", "name": "Protection Mechanism Failure",              "cve_example": "CVE-2018-12714", "req": "R5_detect_CAFEBABE_exec","group": "N2_Magic",   "what_breaks": "Java class file accepted as image"},
+
+  "M9":  {"cwe": "CWE-345", "name": "Insufficient Verification of Data Authenticity", "cve_example": "CVE-2021-44228", "req": "R6_jpeg_magic_match", "group": "N2_Magic", "what_breaks": "non-JPEG bytes with image/jpeg accepted (polyglot)"},
+  "M10": {"cwe": "CWE-345", "name": "Insufficient Verification of Data Authenticity", "cve_example": "CVE-2017-3735", "req": "R7_png_magic_match",  "group": "N2_Magic", "what_breaks": "non-PNG bytes with image/png accepted"},
+  "M11": {"cwe": "CWE-345", "name": "Insufficient Verification of Data Authenticity", "cve_example": "CVE-2018-12714", "req": "R8_webp_riff_match",  "group": "N2_Magic", "what_breaks": "non-WebP bytes with image/webp accepted"},
+
+  "M12": {"cwe": "CWE-20",  "name": "Improper Input Validation",                 "cve_example": "CVE-2017-3735",  "req": "R9_buffer_required",    "group": "N3_Fixed",  "what_breaks": "no-buffer request still passes fixed-mode check"},
+  "M13": {"cwe": "CWE-840", "name": "Business Logic Errors",                     "cve_example": "CVE-2018-12714", "req": "R10_mode_fixed",        "group": "N3_Fixed",  "what_breaks": "mode='fixed' check removed — bypass IMG-03 patch"},
+  "M14": {"cwe": "CWE-20",  "name": "Improper Input Validation",                 "cve_example": "CVE-2017-3735",  "req": "R11_truncated_image",   "group": "N2_Magic",  "what_breaks": "truncated/cut image accepted — JPEG without EOI, PNG without IEND, WebP too short"}
+}

@@ -1,0 +1,40 @@
+mutant,method,group,total_trials,kill_count,kill_rate,first_kill_trial,mean_elapsed_ms,mean_z3_ms,cwe_id,cwe_name,cve_example
+M1,BB,N1_Input,1000,0,0.0000,,0.0084,0.0000,CWE-20,Improper Input Validation,CVE-2017-3735
+M1,HYBRID,N1_Input,1001,0,0.0000,,0.0039,0.8207,CWE-20,Improper Input Validation,CVE-2017-3735
+M1,WB,N1_Input,1,0,0.0000,,0.0000,26.9535,CWE-20,Improper Input Validation,CVE-2017-3735
+M10,BB,N2_Magic,1000,173,0.1730,9,0.0079,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2017-3735
+M10,HYBRID,N2_Magic,1001,174,0.1738,9,0.0038,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2017-3735
+M10,WB,N2_Magic,1,1,1.0000,1,0.0000,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2017-3735
+M11,BB,N2_Magic,1000,197,0.1970,13,0.0080,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2018-12714
+M11,HYBRID,N2_Magic,1001,198,0.1978,13,0.0038,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2018-12714
+M11,WB,N2_Magic,1,1,1.0000,1,0.0000,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2018-12714
+M12,BB,N3_Fixed,1000,0,0.0000,,0.0079,0.0000,CWE-20,Improper Input Validation,CVE-2017-3735
+M12,HYBRID,N3_Fixed,1001,1,0.0010,1,0.0037,0.4009,CWE-20,Improper Input Validation,CVE-2017-3735
+M12,WB,N3_Fixed,1,1,1.0000,1,0.0000,2.0561,CWE-20,Improper Input Validation,CVE-2017-3735
+M13,BB,N3_Fixed,1000,0,0.0000,,0.0078,0.0000,CWE-840,Business Logic Errors,CVE-2018-12714
+M13,HYBRID,N3_Fixed,1001,0,0.0000,,0.0038,0.5218,CWE-840,Business Logic Errors,CVE-2018-12714
+M13,WB,N3_Fixed,1,0,0.0000,,0.0000,0.5349,CWE-840,Business Logic Errors,CVE-2018-12714
+M2,BB,N1_Input,1000,0,0.0000,,0.0087,0.0000,CWE-20,Improper Input Validation,CVE-2018-12714
+M2,HYBRID,N1_Input,1001,1,0.0010,1,0.0039,0.4781,CWE-20,Improper Input Validation,CVE-2018-12714
+M2,WB,N1_Input,1,1,1.0000,1,0.0000,0.6877,CWE-20,Improper Input Validation,CVE-2018-12714
+M3,BB,N1_Input,1000,0,0.0000,,0.0069,0.0000,CWE-20,Improper Input Validation,CVE-2019-0708
+M3,HYBRID,N1_Input,1001,1,0.0010,1,0.0033,0.4368,CWE-20,Improper Input Validation,CVE-2019-0708
+M3,WB,N1_Input,1,1,1.0000,1,0.0000,0.4717,CWE-20,Improper Input Validation,CVE-2019-0708
+M4,BB,N1_Input,1000,260,0.2600,3,0.0076,0.0000,CWE-770,Allocation of Resources Without Limits,CVE-2018-6789
+M4,HYBRID,N1_Input,1001,261,0.2607,3,0.0037,2.2412,CWE-770,Allocation of Resources Without Limits,CVE-2018-6789
+M4,WB,N1_Input,1,1,1.0000,1,0.0000,7.7426,CWE-770,Allocation of Resources Without Limits,CVE-2018-6789
+M5,BB,N2_Magic,1000,0,0.0000,,0.0082,0.0000,CWE-693,Protection Mechanism Failure,CVE-2017-3736
+M5,HYBRID,N2_Magic,1001,1,0.0010,1,0.0039,0.6316,CWE-693,Protection Mechanism Failure,CVE-2017-3736
+M5,WB,N2_Magic,1,1,1.0000,1,0.0000,0.5967,CWE-693,Protection Mechanism Failure,CVE-2017-3736
+M6,BB,N2_Magic,1000,0,0.0000,,0.0087,0.0000,CWE-693,Protection Mechanism Failure,CVE-2018-12714
+M6,HYBRID,N2_Magic,1001,1,0.0010,1,0.0039,0.5953,CWE-693,Protection Mechanism Failure,CVE-2018-12714
+M6,WB,N2_Magic,1,1,1.0000,1,0.0000,0.6023,CWE-693,Protection Mechanism Failure,CVE-2018-12714
+M7,BB,N2_Magic,1000,0,0.0000,,0.0081,0.0000,CWE-693,Protection Mechanism Failure,CVE-2019-0708
+M7,HYBRID,N2_Magic,1001,1,0.0010,1,0.0039,0.5840,CWE-693,Protection Mechanism Failure,CVE-2019-0708
+M7,WB,N2_Magic,1,1,1.0000,1,0.0000,0.5973,CWE-693,Protection Mechanism Failure,CVE-2019-0708
+M8,BB,N2_Magic,1000,0,0.0000,,0.0084,0.0000,CWE-693,Protection Mechanism Failure,CVE-2018-12714
+M8,HYBRID,N2_Magic,1001,1,0.0010,1,0.0040,0.5796,CWE-693,Protection Mechanism Failure,CVE-2018-12714
+M8,WB,N2_Magic,1,1,1.0000,1,0.0000,0.5823,CWE-693,Protection Mechanism Failure,CVE-2018-12714
+M9,BB,N2_Magic,1000,172,0.1720,9,0.0079,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2021-44228
+M9,HYBRID,N2_Magic,1001,173,0.1728,9,0.0038,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2021-44228
+M9,WB,N2_Magic,1,1,1.0000,1,0.0000,0.0000,CWE-345,Insufficient Verification of Data Authenticity,CVE-2021-44228

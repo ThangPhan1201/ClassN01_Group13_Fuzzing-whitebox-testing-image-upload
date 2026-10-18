@@ -20,7 +20,6 @@ import { CartPage, CheckoutPage } from './pages/cart';
 import { MyOrdersPage, OrderDetailPage, OrderSuccessPage, SellerOrdersPage } from './pages/orders';
 import { MockPaymentPage, PaymentSuccessPage, PaymentFailedPage, VnpayReturnPage, BankingConfirmationPage, SandboxPaymentPage } from './pages/payment';
 import WalletPage from './pages/wallet/WalletPage';
-import AdminLayout from './pages/admin/AdminLayout';
 import RequireAdmin from './pages/admin/RequireAdmin';
 import AdminDashboardPage from './pages/admin/AdminDashboardPage';
 import AdminUsersPage from './pages/admin/AdminUsersPage';

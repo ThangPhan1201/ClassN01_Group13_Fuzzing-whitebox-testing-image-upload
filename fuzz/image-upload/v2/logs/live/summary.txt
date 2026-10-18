@@ -1,0 +1,28 @@
+{
+  "started_at": "2026-10-17 22:55:39",
+  "mode": "both",
+  "duration_s": 300,
+  "watchdog": true,
+  "static": {
+    "trials": 500,
+    "pass": 569,
+    "reject": 2116,
+    "crash": 0
+  },
+  "dynamic": {
+    "trials": 500,
+    "pass": 691,
+    "reject": 2422,
+    "crash": 0
+  },
+  "watchdog_stats": {
+    "total_crashes": 0,
+    "crashes_in_window": 0,
+    "max_restarts": 3,
+    "window_s": 300,
+    "aborted": false,
+    "last_crash": null
+  },
+  "ended_at": "2026-10-17 22:57:28",
+  "total_elapsed_s": 109.08
+}

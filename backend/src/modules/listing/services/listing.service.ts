@@ -7,9 +7,117 @@ import {
 } from '@nestjs/common';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { AuditLogService, AuditAction } from 'src/common/services/audit-log.service';
+import {
+  PAGINATION_MAX_PAGE,
+  PAGINATION_MAX_LIMIT,
+} from 'src/common/dto/pagination.dto';
 import { CreateListingDto, UpdateListingDto, SearchListingDto } from '../dto';
 import { ListingStatus, BookCondition } from '@prisma/client';
 import { Prisma } from '@prisma/client';
+
+const PRICE_MAX = 1_000_000_000;
+
+/**
+ * Returns a sanitized copy of the query that is guaranteed to be
+ * safe to pass straight to Prisma. This is the service-layer
+ * counterpart of the DTO @Min/@Max validators, and runs even when
+ * findAll() is called internally (e.g. from findMyListings) or
+ * with an attacker-controlled DTO that bypassed the HTTP pipe.
+ *
+ * Invalid integer / range values are clamped rather than thrown,
+ * because listing search is a read-only operation and 400-ing on
+ * a single bad filter would defeat the user's pagination
+ * navigation. The original (invalid) inputs are reported via
+ * audit-log so the security team can detect probing.
+ */
+function sanitizeQuery(
+  q: SearchListingDto,
+  audit: AuditLogService,
+): SearchListingDto {
+  const issues: string[] = [];
+
+  // ---- page ----
+  let page = q.page;
+  if (page === undefined || page === null || !Number.isFinite(page)) {
+    page = 1;
+    issues.push('page:invalid');
+  } else if (!Number.isInteger(page)) {
+    page = Math.trunc(page);
+    issues.push('page:not-int');
+  } else if (page < 1) {
+    page = 1;
+    issues.push('page:clamped-to-1');
+  } else if (page > PAGINATION_MAX_PAGE) {
+    page = PAGINATION_MAX_PAGE;
+    issues.push(`page:clamped-to-${PAGINATION_MAX_PAGE}`);
+  }
+
+  // ---- limit ----
+  let limit = q.limit;
+  if (limit === undefined || limit === null || !Number.isFinite(limit)) {
+    limit = 20;
+    issues.push('limit:invalid');
+  } else if (!Number.isInteger(limit)) {
+    limit = Math.trunc(limit);
+    issues.push('limit:not-int');
+  } else if (limit < 1) {
+    limit = 1;
+    issues.push('limit:clamped-to-1');
+  } else if (limit > PAGINATION_MAX_LIMIT) {
+    limit = PAGINATION_MAX_LIMIT;
+    issues.push(`limit:clamped-to-${PAGINATION_MAX_LIMIT}`);
+  }
+
+  // ---- q (string) ----
+  let safeQ: string | undefined = q.q;
+  if (safeQ !== undefined && typeof safeQ !== 'string') {
+    safeQ = undefined;
+    issues.push('q:dropped-non-string');
+  }
+  if (typeof safeQ === 'string' && safeQ.length > 500) {
+    safeQ = safeQ.slice(0, 500);
+    issues.push('q:truncated-500');
+  }
+
+  // ---- price range ----
+  const minPrice =
+    q.minPrice !== undefined && Number.isFinite(q.minPrice)
+      ? Math.min(PRICE_MAX, Math.max(0, q.minPrice))
+      : undefined;
+  const maxPrice =
+    q.maxPrice !== undefined && Number.isFinite(q.maxPrice)
+      ? Math.min(PRICE_MAX, Math.max(0, q.maxPrice))
+      : undefined;
+  if (q.minPrice !== undefined && !Number.isFinite(q.minPrice)) {
+    issues.push('minPrice:dropped');
+  }
+  if (q.maxPrice !== undefined && !Number.isFinite(q.maxPrice)) {
+    issues.push('maxPrice:dropped');
+  }
+
+  // ---- audit log the sanitization (fire-and-forget) ----
+  if (issues.length > 0) {
+    void audit
+      .log({
+        action: AuditAction.SUSPICIOUS_INPUT,
+        entityType: 'Listing',
+        entityId: 'search',
+        newData: { issues, raw: q },
+      })
+      .catch(() => {
+        /* never let audit failure break the request */
+      });
+  }
+
+  return {
+    ...q,
+    page,
+    limit,
+    q: safeQ,
+    minPrice,
+    maxPrice,
+  };
+}
 
 @Injectable()
 export class ListingService {
@@ -102,6 +210,11 @@ export class ListingService {
   }
 
   async findAll(query: SearchListingDto, userId?: number, userRoles?: string[]) {
+    // Defense in depth: sanitize at the service layer even if the
+    // DTO ValidationPipe didn't run (internal call, test, future
+    // GraphQL resolver, etc.). Any clamped / dropped values are
+    // recorded via audit log as SUSPICIOUS_INPUT.
+    const safe = sanitizeQuery(query, this.auditLog);
     const {
       page = 1,
       limit = 20,
@@ -117,7 +230,7 @@ export class ListingService {
       minPrice,
       maxPrice,
       approvedOnly = true,
-    } = query;
+    } = safe;
 
     const where: Prisma.ListingWhereInput = {
       deletedAt: null,
@@ -135,8 +248,8 @@ export class ListingService {
       where.status = status;
     }
 
-    // Full-text search
-    if (q) {
+    // Full-text search — guard against non-string q (type confusion bug)
+    if (q && typeof q === 'string') {
       where.OR = [
         { book: { title: { contains: q, mode: 'insensitive' } } },
         { book: { author: { contains: q, mode: 'insensitive' } } },
@@ -181,8 +294,11 @@ export class ListingService {
     const [data, total] = await Promise.all([
       this.prisma.listing.findMany({
         where,
-        skip: (page - 1) * limit,
-        take: limit,
+        // safe.page is already a finite int in [1, MAX_PAGE],
+        // safe.limit is a finite int in [1, MAX_LIMIT], so the
+        // product is always a non-negative integer < Number.MAX_SAFE_INTEGER.
+        skip: (safe.page! - 1) * safe.limit!,
+        take: safe.limit!,
         orderBy: { [actualSortBy]: sortOrder },
         include: {
           book: {
@@ -210,11 +326,12 @@ export class ListingService {
       data,
       meta: {
         total,
-        page,
-        limit,
-        totalPages: Math.ceil(total / limit),
-        hasNext: page < Math.ceil(total / limit),
-        hasPrev: page > 1,
+        page: safe.page!,
+        limit: safe.limit!,
+        // safe.limit >= 1 → no division by zero
+        totalPages: Math.ceil(total / safe.limit!),
+        hasNext: safe.page! < Math.ceil(total / safe.limit!),
+        hasPrev: safe.page! > 1,
       },
     };
   }

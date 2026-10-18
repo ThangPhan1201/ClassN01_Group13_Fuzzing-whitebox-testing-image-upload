@@ -1,0 +1,49 @@
+layer,mutant,method,group,total_trials,kill_count,kill_rate,first_kill_trial,mean_elapsed_ms,mean_z3_ms,"cwe_id,cwe_name",cve_example
+static_property,,ListingService.findAll,normal,317,0,0.0,0,0.0,0.0,"CWE-20,Improper Input Validation",-
+static_property,,ListingService.findAll,empty,7,0,0.0,0,0.0,0.0,"CWE-20,Improper Input Validation",-
+static_property,,ListingService.findAll,very_long,20,0,0.0,0,0.0,0.0,"CWE-20,Improper Input Validation",-
+static_property,,ListingService.findAll,special_chars,61,0,0.0,0,0.0,0.0,"CWE-20,Improper Input Validation",-
+static_property,,ListingService.findAll,unicode,33,0,0.0,0,0.0,0.0,"CWE-176,Improper Handling of Unicode Encoding",-
+static_property,,ListingService.findAll,sql_injection,16,0,0.0,0,0.0,0.0,"CWE-89,Improper Neutralization of Special Elements used in an SQL Command",-
+static_property,,ListingService.findAll,xss,13,0,0.0,0,0.0,0.0,"CWE-79,Improper Neutralization of Input During Web Page Generation (XSS)",-
+static_property,,ListingService.findAll,path_traversal,9,0,0.0,0,0.0,0.0,"CWE-22,Improper Limitation of a Pathname to a Restricted Directory",-
+static_property,,ListingService.findAll,type_confusion,13,5,0.384615,1,2.6,0.0,"CWE-20,Improper Input Validation",-
+static_property,,ListingService.findAll,boundary,56,4,0.071429,6,1,0.0,"CWE-1284,Improper Validation of Specified Quantity in Input",-
+dynamic_http,,POST /api/upload (image-upload endpoint),polyglot_jpeg_zip,122,0,0.0,0,84.789,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),name_with_path,138,0,0.0,0,81.9,0.0,"CWE-22,Improper Limitation of a Pathname to a Restricted Directory",-
+dynamic_http,,POST /api/upload (image-upload endpoint),wrong_magic,133,0,0.0,0,81.326,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),all_0xff,134,0,0.0,0,81.601,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),empty,147,0,0.0,0,81.678,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),extension_mismatch,139,0,0.0,0,82.052,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),valid,139,0,0.0,0,83.973,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),null_bytes,156,0,0.0,0,81.919,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),truncated,149,0,0.0,0,82.041,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),wrong_mime,133,0,0.0,0,82.204,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),exe_in_disguise,137,0,0.0,0,81.524,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),all_zeros,161,0,0.0,0,82.225,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),mime_spoof,148,0,0.0,0,81.819,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),huge_magic,138,0,0.0,0,83.231,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),random_garbage,131,0,0.0,0,81.399,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),oversize,136,0,0.0,0,189.459,0.0,"CWE-770,Allocation of Resources Without Limits or Throttling",-
+dynamic_http,,POST /api/upload (image-upload endpoint),single_byte,154,0,0.0,0,81.573,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),case_upper_mime,121,0,0.0,0,81.569,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),polyglot_elf_middle,108,0,0.0,0,83.104,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),size_mismatch_attack,102,0,0.0,0,187.631,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),polyglot_zip_middle,99,0,0.0,0,82.23,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),case_upper_ext,99,0,0.0,0,83.561,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),mime_vs_ext_mismatch,96,0,0.0,0,82.237,0.0,"CWE-20,Improper Input Validation",-
+dynamic_http,,POST /api/upload (image-upload endpoint),polyglot_mz_middle,93,0,0.0,0,81.685,0.0,"CWE-20,Improper Input Validation",-
+mutation,M1,image-upload validateFile / REQ R1,R1,1,1,1.0,1,0.0,0.755,"CWE-20,Improper Input Validation",-
+mutation,M2,image-upload validateFile / REQ R2,R2,1,1,1.0,1,0.0,0.486,"CWE-20,Improper Input Validation",-
+mutation,M3,image-upload validateFile / REQ R3,R3,1,1,1.0,1,0.0,0.447,"CWE-20,Improper Input Validation",-
+mutation,M4,image-upload validateFile / REQ R4,R4,1,1,1.0,1,0.0,2.36,"CWE-20,Improper Input Validation",-
+mutation,M5,image-upload validateFile / REQ R5a,R5a,1,1,1.0,1,0.0,0.575,"CWE-20,Improper Input Validation",-
+mutation,M6,image-upload validateFile / REQ R5b,R5b,1,1,1.0,1,0.0,0.584,"CWE-20,Improper Input Validation",-
+mutation,M7,image-upload validateFile / REQ R5c,R5c,1,1,1.0,1,0.0,0.576,"CWE-20,Improper Input Validation",-
+mutation,M8,image-upload validateFile / REQ R5d,R5d,1,1,1.0,1,0.0,0.566,"CWE-20,Improper Input Validation",-
+mutation,M9,image-upload validateFile / REQ R6,R6,1,1,1.0,1,0.0,0.0,"CWE-20,Improper Input Validation",-
+mutation,M10,image-upload validateFile / REQ R7,R7,1,1,1.0,1,0.0,0.0,"CWE-20,Improper Input Validation",-
+mutation,M11,image-upload validateFile / REQ R8,R8,1,1,1.0,1,0.0,0.0,"CWE-20,Improper Input Validation",-
+mutation,M12,image-upload validateFile / REQ R9,R9,1,1,1.0,1,0.0,0.405,"CWE-20,Improper Input Validation",-
+mutation,M13,image-upload validateFile / REQ R10,R10,1,1,1.0,1,0.0,0.518,"CWE-20,Improper Input Validation",-
+mutation,M14,image-upload validateFile / REQ R11,R11,1,1,1.0,1,0.0,0.0,"CWE-20,Improper Input Validation",-

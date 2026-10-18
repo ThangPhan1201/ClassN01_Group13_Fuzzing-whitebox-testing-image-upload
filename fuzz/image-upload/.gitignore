@@ -1,0 +1,7 @@
+logs/*.json
+!logs/.gitkeep
+crashes/*
+!crashes/.gitkeep
+__pycache__/
+*.pyc
+.venv/

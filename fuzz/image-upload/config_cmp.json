@@ -1,0 +1,34 @@
+{
+  "_doc": "Campaign configuration for BB vs WB vs HYBRID comparison on image-upload parser (13 mutants).",
+  "bb": {
+    "max_trials": 1000,
+    "seed": 42,
+    "description": "Black-box random byte fuzzing on each mutant."
+  },
+  "wb": {
+    "max_trials": 50,
+    "seed": 42,
+    "description": "White-box Z3 concolic: one model per mutant, replay across all mutants."
+  },
+  "hybrid": {
+    "bb_trials": 200,
+    "wb_models": 13,
+    "seed": 42,
+    "description": "Seed with BB then deepen with WB."
+  },
+  "mutants": [
+    {"id": "M1",  "req": "R1",  "group": "N1_Input",  "primitive": "skip_file_check"},
+    {"id": "M2",  "req": "R2",  "group": "N1_Input",  "primitive": "skip_mime_check"},
+    {"id": "M3",  "req": "R3",  "group": "N1_Input",  "primitive": "skip_ext_check"},
+    {"id": "M4",  "req": "R4",  "group": "N1_Input",  "primitive": "skip_size_check"},
+    {"id": "M5",  "req": "R5",  "group": "N2_Magic",  "primitive": "skip_mz_check"},
+    {"id": "M6",  "req": "R5",  "group": "N2_Magic",  "primitive": "skip_elf_check"},
+    {"id": "M7",  "req": "R5",  "group": "N2_Magic",  "primitive": "skip_zip_check"},
+    {"id": "M8",  "req": "R5",  "group": "N2_Magic",  "primitive": "skip_cafebabe_check"},
+    {"id": "M9",  "req": "R6",  "group": "N2_Magic",  "primitive": "skip_jpeg_magic"},
+    {"id": "M10", "req": "R7",  "group": "N2_Magic",  "primitive": "skip_png_magic"},
+    {"id": "M11", "req": "R8",  "group": "N2_Magic",  "primitive": "skip_webp_magic"},
+    {"id": "M12", "req": "R9",  "group": "N3_Fixed",  "primitive": "skip_buffer_required"},
+    {"id": "M13", "req": "R10", "group": "N3_Fixed",  "primitive": "skip_fixed_mode"}
+  ]
+}

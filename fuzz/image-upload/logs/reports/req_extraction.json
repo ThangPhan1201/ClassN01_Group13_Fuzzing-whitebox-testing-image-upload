@@ -1,0 +1,72 @@
+[
+  {
+    "req": "R1",
+    "branch": "REJECT_MISSING",
+    "src_keyword": "if (!file)",
+    "line": 39,
+    "snippet": "if (!file) {"
+  },
+  {
+    "req": "R2",
+    "branch": "REJECT_MIME",
+    "src_keyword": "allowedMimeTypes.includes",
+    "line": 44,
+    "snippet": "if (!this.allowedMimeTypes.includes(file.mimetype || '')) {"
+  },
+  {
+    "req": "R3",
+    "branch": "REJECT_EXT",
+    "src_keyword": "allowedExtensions.includes",
+    "line": 52,
+    "snippet": "if (!this.allowedExtensions.includes(ext)) {"
+  },
+  {
+    "req": "R4",
+    "branch": "REJECT_SIZE",
+    "src_keyword": "maxFileSize",
+    "line": 25,
+    "snippet": "private readonly maxFileSize = 5 * 1024 * 1024; // 5MB"
+  },
+  {
+    "req": "R5",
+    "branch": "REJECT_EXE",
+    "src_keyword": "containsExecutableContent",
+    "line": 70,
+    "snippet": "if (this.containsExecutableContent(file.buffer)) {"
+  },
+  {
+    "req": "R6",
+    "branch": "REJECT_NOT_IMAGE (jpeg)",
+    "src_keyword": "jpegMagic",
+    "line": null,
+    "snippet": null
+  },
+  {
+    "req": "R7",
+    "branch": "REJECT_NOT_IMAGE (png)",
+    "src_keyword": "pngMagic",
+    "line": null,
+    "snippet": null
+  },
+  {
+    "req": "R8",
+    "branch": "REJECT_NOT_IMAGE (webp)",
+    "src_keyword": "webpMagic",
+    "line": null,
+    "snippet": null
+  },
+  {
+    "req": "R9",
+    "branch": "REJECT_NO_BUFFER (fix)",
+    "src_keyword": "buffer required",
+    "line": null,
+    "snippet": null
+  },
+  {
+    "req": "R10",
+    "branch": "mode='fixed' (patch)",
+    "src_keyword": "matchesImageMagic",
+    "line": 74,
+    "snippet": "if (!this.matchesImageMagic(file.buffer, file.mimetype || '')) {"
+  }
+]
